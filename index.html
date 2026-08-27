@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achar - Taste of Nepal</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #fff8ed;
+            color: #333;
+        }
+
+        /* Navbar */
+        nav {
+            background: #b52b2b;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #ffd166;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 8%;
+            background: linear-gradient(120deg, #fff1d6, #ffe0b2);
+        }
+
+        .hero-text {
+            width: 50%;
+        }
+
+        .hero-text h1 {
+            font-size: 55px;
+            color: #9e2020;
+            margin-bottom: 20px;
+        }
+
+        .hero-text h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #b52b2b;
+            color: white;
+            padding: 13px 28px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #8d1e1e;
+        }
+
+        .hero-image {
+            width: 42%;
+            text-align: center;
+        }
+
+        .achar-circle {
+            width: 330px;
+            height: 330px;
+            margin: auto;
+            border-radius: 50%;
+            background: #d65a24;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 100px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        /* About */
+        .about {
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        .about h2 {
+            color: #9e2020;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        /* Achar Types */
+        .types {
+            padding: 70px 8%;
+            background: #fff0dc;
+            text-align: center;
+        }
+
+        .types h2 {
+            font-size: 36px;
+            color: #9e2020;
+            margin-bottom: 40px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card-icon {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #b52b2b;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            line-height: 1.6;
+            color: #666;
+        }
+
+        /* Ingredients */
+        .ingredients {
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        .ingredients h2 {
+            color: #9e2020;
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        .ingredient-list {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .ingredient {
+            background: #b52b2b;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 25px;
+        }
+
+        /* Footer */
+        footer {
+            background: #3b1717;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        footer p {
+            margin: 7px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .hero-text,
+            .hero-image {
+                width: 100%;
+            }
+
+            .hero-text h1 {
+                font-size: 42px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .achar-circle {
+                width: 250px;
+                height: 250px;
+                font-size: 75px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">🌶️ ACHAR</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#types">Types</a></li>
+            <li><a href="#ingredients">Ingredients</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+            <h1>Authentic Nepali Achar</h1>
+
+            <h2>A Little Spice, A Lot of Taste!</h2>
+
+            <p>
+                Discover the delicious taste of traditional Nepali achar.
+                Made with fresh ingredients, aromatic spices and lots of
+                love, achar is the perfect companion for every Nepali meal.
+            </p>
+
+            <a href="#types" class="btn">Explore Achar</a>
+        </div>
+
+        <div class="hero-image">
+            <div class="achar-circle">
+                🌶️🥭
+            </div>
+        </div>
+
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+
+        <h2>About Achar</h2>
+
+        <p>
+            Achar is a popular traditional side dish in Nepal. It is usually
+            prepared using vegetables, fruits, herbs and a mixture of spices.
+            From spicy tomato achar to tangy radish and mango achar, every
+            variety brings a unique flavor to the table.
+        </p>
+
+    </section>
+
+    <!-- Types Section -->
+    <section class="types" id="types">
+
+        <h2>Popular Types of Achar</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="card-icon">🍅</div>
+                <h3>Tomato Achar</h3>
+                <p>
+                    Spicy and flavorful tomato achar made with roasted
+                    tomatoes, chilies, garlic and traditional spices.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🥭</div>
+                <h3>Mango Achar</h3>
+                <p>
+                    Tangy raw mango mixed with spices to create a delicious
+                    sweet, sour and spicy pickle.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🥒</div>
+                <h3>Cucumber Achar</h3>
+                <p>
+                    A refreshing and crunchy achar prepared with cucumber,
+                    sesame, chili and aromatic spices.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Ingredients -->
+    <section class="ingredients" id="ingredients">
+
+        <h2>Traditional Ingredients</h2>
+
+        <div class="ingredient-list">
+            <span class="ingredient">🌶️ Chili</span>
+            <span class="ingredient">🍅 Tomato</span>
+            <span class="ingredient">🥭 Mango</span>
+            <span class="ingredient">🧄 Garlic</span>
+            <span class="ingredient">🧅 Onion</span>
+            <span class="ingredient">🌿 Coriander</span>
+            <span class="ingredient">Sesame</span>
+            <span class="ingredient">Mustard Oil</span>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>🌶️ Taste of Nepal 🌶️</p>
+        <p>Traditional Achar • Authentic Flavor • Homemade Taste</p>
+        <p>© 2026 Achar Nepal. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+```
+
